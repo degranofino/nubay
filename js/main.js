@@ -63,6 +63,7 @@ function hotspots () {
   });
 
   jQuery('.hotspots__item').each(function() {
+
     // Obtén el elemento y el label asociado
     const elemento = jQuery(this);
     const item = jQuery(this).attr('data-item');
@@ -82,18 +83,20 @@ function hotspots () {
     // Convierte el valor de "top" del label a píxeles
     const topLabelPixeles = (topLabelPorcentaje / 100) * altoContenedor;
 
-    console.log('topElemento en píxeles:', topElemento);
-    console.log('topLabel en porcentaje:', topLabelPorcentaje);
-    console.log('topLabel en píxeles:', topLabelPixeles);
+    // console.log('topElemento en píxeles:', topElemento);
+    // console.log('topLabel en porcentaje:', topLabelPorcentaje);
+    // console.log('topLabel en píxeles:', topLabelPixeles);
 
     // Calcula la diferencia entre los valores de "top"
     const diferenciaTop = topElemento - topLabelPixeles;
 
-    console.log('Diferencia de top en píxeles:', diferenciaTop);
+    // console.log('Diferencia de top en píxeles:', diferenciaTop);
 
     // Ajusta la altura de la barra
     jQuery(this).find('.hotspots__bar').css('height', (diferenciaTop - 18) + 'px');
+
   });
+
   jQuery('.hotspots__item').each(function () {
     var _this = this;
     var inview = new Waypoint({
