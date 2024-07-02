@@ -1,0 +1,321 @@
+// contact form 7
+.wpcf7-form {
+
+    span {
+        color: #404040 !important;
+        font-size: 1.4rem;
+        line-height: 1.2em;
+        @media ( min-width: 992px  ) {  font-size: 1.2rem; }
+        @media ( min-width: 1200px  ) {  font-size: 1.4rem; }
+    }
+
+    p {
+        font-family: $font-family;
+        font-size: 1.4rem !important;
+    }
+
+    br {
+        display: none
+    }
+
+}
+
+// checkbox
+.wpcf7-acceptance  {
+
+    display: block;
+    margin: 0 0 2rem 0;
+    .wpcf7-list-item { margin: 0; }
+    label { display: flex; }
+
+    a { text-decoration: underline;  }
+    a:hover { color: $color_primary; }
+    span {
+        font-size: 1.4rem !important;
+        @media ( min-width: 992px  ) {  font-size: 1.2rem !important; }
+        @media ( min-width: 1200px  ) {  font-size: 1.3rem !important; }
+    }
+
+    input {
+        opacity: 0;
+     }
+
+    input:not(:checked) + .wpcf7-list-item-label::after {
+        opacity: 0;
+    }
+
+    .wpcf7-list-item-label {
+        position: relative;
+        padding-left: 1rem;
+        &::before,
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-15px, -50%);
+            content: '';
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            // border: 1px solid $color-primary;
+            // border-radius: 100%;
+            transition: all 0.3s;
+            background-color: $color_white;
+        }
+        &::after {
+            border: 0;
+            width: 0.9rem;
+            height: 0.9rem;
+            left: 0.3rem;
+            opacity: 0;
+            background-color: $color-primary;
+            // border-radius: 0.3rem;
+            opacity: 1;
+        }
+    }
+
+}
+
+// inputs
+input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    @extend .buttons;
+    border-radius: 0 !important;
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: transparent !important;
+    color: $color_primary !important;
+    border: 0 !important;
+    border-bottom: 1px solid $color_primary !important;
+    font-size: 1.4rem;
+    padding: 1.2rem 0 !important;
+    @media ( min-width: 992px  ) {  font-size: 1.2rem; }
+    @media ( min-width: 1200px  ) {  font-size: 1.4rem; }
+}
+
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $color_primary;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  @media ( min-width: 768px  ) {  -webkit-box-shadow: 0 0 0px 1000px transparent inset; }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: inherit;
+}
+
+// textarea
+textarea {
+    height: auto !important;
+    max-height: 42px !important;
+    overflow: hidden;
+}
+
+// select
+select option {
+    background: $color_white;
+    color: $color_primary;
+    padding: 5px;
+    line-height: 1.5em;
+}
+
+.input_select {
+    position: relative;
+    &:after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        width: 14px; height: 7px;
+        background: url(../img/select_arrow.png);
+        background-size: cover !important;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        @media ( min-width: 992px  ) { width: 14px; height: 7px; }
+    }
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand {
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
+    }
+}
+*/
+
+
+// SUBMIT
+// button.btn {
+//     @extend  .buttons;
+//     color: $color_secondary !important;
+//     background: $color_primary !important;
+//     border: 2px solid $color_white;
+//     border-radius: 100px;
+//     transition: all .3s;
+//     margin: 2rem 0 0 0;
+//     display: inherit;
+//     @media ( min-width: 768px  ) { margin: 3rem 0 0 0; }
+//     @media ( min-width: 1600px  ) { margin: 5rem 0 0 0; }
+//     &:hover {
+//         background: #231D1A !important;
+//     }
+// }
+
+// AJAX LOADER
+.ajax-loader {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+}
+
+/****** PLACEGOLDER ******/
+::-webkit-input-placeholder { color: $color_primary !important; transition: all .3s;  }
+::-moz-placeholder { color: $color_primary !important; transition: all .3s;  }
+:-ms-input-placeholder { color: $color_primary !important;  transition: all .3s; }
+:-moz-placeholder { color: $color_primary !important; transition: all .3s;  }
+
+input:hover, input:focus, select, textarea {
+    &::-webkit-input-placeholder { color: $color_white !important;  }
+    &::-moz-placeholder { color: $color_white !important;  }
+    &:-ms-input-placeholder { color: $color_white !important;  }
+    &:-moz-placeholder { color: $color_white !important;  }
+}
+
+/****** CONTACT FORM ******/
+.wpcf7-form-control-wrap {
+    display: block;
+    margin-bottom: 0 !important;
+}
+
+// MENSAJES
+div.wpcf7-response-output {
+    margin: 10px 0 0;
+    border:2px solid  #ff0000;
+    color: #ff0000;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    border: 2px solid #ff0000;
+    color: #ff0000;
+}
+
+div.wpcf7-mail-sent-ok {
+    border: 2px solid #94f2b5;
+    color: #94f2b5;
+}
+
+/****** EXTRA CUSTOMIZACION ******/
+.input {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 0 0 3rem 0;
+    width: 100%;
+    @media ( min-width: 992px  ) { margin: 0 0 4.5rem 0; }
+}
+
+// input
+.input__field {
+    position: relative;
+    z-index: 1000;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    -webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+    outline: none;
+}
+
+// label
+.input__label {
+    @extend  .buttons;
+    position: absolute;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 1.2rem 0 !important;
+}
+
+.input__label-content {
+    position: relative;
+    display: block;
+    width: 100%;
+    color: $color_white;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transition:
+    -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: all .3s;
+}
+
+// hover
+.input__field--madoka:focus + .input__label--madoka,
+.input--filled .input__label--madoka {
+    cursor: default;
+    pointer-events: none;
+}
+
+.input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
+.input--filled + .input__label--madoka .input__label-content--madoka {
+    transform: translateY(-25px);
+}
+
+
+// .input--filled {
+//     .input__label-content--madoka {
+//         transform: translateY(-25px);
+//         color: $color_primary !important;
+//     }
+//     input, select, textarea {
+//         color: $color_primary !important;
+//         border-bottom: 2px solid $color_primary!important;
+//     }
+// }
+
+/****** PLACEGOLDER ******/
+select, select:hover { color: transparent !important; }
+select::-webkit-input-placeholder { color: transparent !important; transition: all .3s;  }
+select::-moz-placeholder { color: transparent !important; transition: all .3s;  }
+select:-ms-input-placeholder { color: transparent !important;  transition: all .3s; }
+select:-moz-placeholder { color: transparent !important; transition: all .3s;  }

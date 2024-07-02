@@ -1,0 +1,179 @@
+#wrapper {
+    margin: auto;
+    // overflow-x: hidden;
+    width: 100%;
+}
+
+// SECTION
+
+.section {
+    position: relative;
+    z-index: 100;
+}
+
+.section_wrap {
+    position: relative;
+    padding: 7rem 3rem;
+    @media ( min-width: 768px  ) { padding: 10rem 4rem; }
+    @media ( min-width: 992px  ) { padding: 15rem 6rem; }
+    @media ( min-width: 1200px  ) { padding: 18rem 10rem; }
+    @media ( min-width: 1600px  ) { padding: 20rem; }
+}
+
+// FOOTER
+
+footer {
+
+    font-family: $font-family;
+    color: #666767;
+    position: relative;
+    z-index: 100;
+    padding: 4rem 2rem 7rem;
+    font-size: 1.2rem;
+    line-height: 1em;
+    text-align: center;
+
+    @media ( min-width: 768px  ) {
+        padding: 2.5rem 4rem 12rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media ( min-width: 1200px  ) {
+        padding: 3rem 12rem 20rem;
+    }
+
+
+    a {
+        color: #666767;
+        &:hover {
+            color: #544646;
+            path {
+                fill: #544646;
+            }
+        }
+    }
+
+    svg {
+        height: 20px;
+        path {
+            fill: #666767;
+            transition: all .3s;
+        }
+    }
+
+}
+
+ul.menu_footer {
+
+    text-align: center;
+
+    li {
+
+        border-left: 1px solid #666767;
+        padding: 0 5px;
+        &:first-child { border: 0; }
+        @media ( min-width: 768px  ) { padding: 0 10px; }
+        @media ( min-width: 1200px  ) { padding: 0 15px; }
+
+        display: inline-block;
+        &:first-child { border: 0; }
+
+        a {
+            font-weight: 500;
+            color: #666767;
+        }
+
+    }
+
+}
+
+// HEADER
+
+header {
+
+    position: fixed;
+    z-index: 800;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s;
+    padding: 2.5rem;
+    padding-bottom: 2rem !important;
+    @media ( min-width: 768px  ) { padding: 4rem; }
+    @media ( min-width: 1200px  ) { padding: 7rem; }
+
+    &:before {
+        // opacity: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        transition: all .3s;
+        background: rgba(0,0,0,0.7);
+        background: -moz-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.7)), color-stop(100%, rgba(0,0,0,0)));
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+        background: -o-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+        background: -ms-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+    }
+
+    .btn {
+        position: relative;
+        @media ( min-width: 768px  ) { display: inline-block; }
+        /*
+        @media ( max-width: 767px  ) {
+            width: 47px;
+            height: 47px;
+            overflow: hidden;
+            text-indent: -999px;
+            background: transparent;
+            background: url(../img/contact_button.png) !important;
+            padding: 0;
+            border: 0;
+            position: fixed;
+            border-radius: 0;
+            bottom: 10px;
+            right: 10px;
+            &:hover { background: url(../img/contact_button.png) !important; }
+        } */
+    }
+
+    .navbar-brand {
+        position: relative;
+        z-index: 100;
+        margin: 0;
+        img {
+            transition: all .3s;
+            width: 71px; height: auto;
+            @media ( min-width: 768px  ) { width: 200px;  }
+            @media ( min-width: 1200px  ) { width: 239px;  }
+        }
+        svg {
+            path {
+                fill: $color_white;
+            }
+        }
+    }
+}
+
+// SHRINK FUNCTIONS
+.shrink header {
+    padding: 1.5rem 2.5rem;
+    @media ( min-width: 768px  ) { padding: 2.5rem 4rem; }
+    @media ( min-width: 1200px  ) { padding: 4rem 7rem; }
+    &::before {
+        // opacity: 1;
+    }
+    .navbar-brand path {
+        fill: $color_primary;
+    }
+}

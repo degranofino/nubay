@@ -1,0 +1,25 @@
+
+
+.theme-dark {
+    * {
+        color: #666767;
+    }
+    .module__section {
+        color: #404040;
+        &:before {
+            background-color: #404040;
+        }
+    }
+    .module__title {
+        color: #404040;
+    }
+}
+
+.theme-light {
+    * {
+        color: $color-secondary;
+    }
+    .module__section:before {
+        background-color: $color-secondary;
+    }
+}

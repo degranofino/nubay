@@ -1,0 +1,134 @@
+// ESTILOS
+.buttons {
+    font-family: $font-family;
+    text-transform: uppercase;
+    padding: 1.2rem 2rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1em;
+    border: 0;
+    border-radius: 100px;
+    transition: all .3s;
+    @media ( min-width: 992px  ) {
+        padding: 1.8rem 4rem; 
+        font-size: 1.4rem;
+    }
+    span { display: inline-block; }
+}
+
+// BOTONES
+.btn {
+    @extend .buttons;
+    path { fill: $color_white !important; }
+}
+
+.btn-primary {
+    background: $color_primary !important;
+    color: $color_white !important;
+    path { fill: $color_white !important; }
+    &:hover {
+        background: #508E95 !important;
+        color: $color_secondary !important;
+        path { fill: $color_secondary !important; }
+    }
+
+}
+
+.btn-secondary {
+    background: $color_secondary !important;
+    color: $color_primary !important;
+    path { fill: $color_primary !important; }
+    &:hover {
+        background: $color_primary !important;
+        color: $color_secondary !important;
+        path { fill: $color_secondary !important; }
+    }
+}
+
+.btn-outline-primary {
+    background: transparent !important;
+    color: $color_primary !important;
+    border: 2px solid $color_primary;
+    path { fill: $color_primary !important; }
+    &:hover {
+        background: $color_primary !important;
+        color: $color_white !important;
+        border: 2px solid $color_primary;
+        path { fill: $color_white !important; }
+    }
+}
+
+// BOTON ARROW
+.btn__arrow {
+
+    position: relative;
+    padding-right: 7.2rem !important;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        width: 19px;
+        height: 9px;
+        background: url(../img/arrow_btn.svg);
+        background-size: cover;
+    }
+
+    &:hover {
+        background-color: transparent !important;
+        color: $color_primary !important;
+    }
+
+    .button_modal_gallery__icon {
+        width: 19px;
+        height: 10px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translate(-50%);
+        overflow: hidden;
+        &:before {
+            content: '';
+            display: block;
+            height: 10px;
+            width: 19px;
+            background: url(../img/arrow_btn.svg);
+            position:absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%);
+        }
+    }
+    svg {
+        position: absolute;
+        right: 2.5rem;
+        top: 50%;
+        width: 19px;
+        transform: translate(-50%);
+        transition: all .3s;
+    }
+    &:hover{
+        padding-right: 10rem !important;
+        .button_modal_gallery__icon:before {
+            animation-name: view_button;
+            animation-duration: .8s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+        svg {
+            width: 0 !important;
+            height: 10px !important;
+        }
+    }
+}
+
+@keyframes view_button {
+    0% { left: 0; }
+    50% { left: 150%; }
+    51% { left: unset; right: 100%; }
+    80% { right: 25%; }
+    100% { right: 0; }
+}

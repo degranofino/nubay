@@ -1,0 +1,60 @@
+/******************************/
+/************ RESET ***********/
+/******************************/
+.wpb_button, .wpb_content_element, ul.wpb_thumbnails-fluid > li {  margin-bottom: 0 !important; }
+.wpb_revslider_element { margin-bottom: 0 !important; }
+
+.vc_col-has-fill>.vc_column-inner,
+.vc_row-has-fill+.vc_row-full-width+.vc_row>.vc_column_container>.vc_column-inner,
+.vc_row-has-fill+.vc_row>.vc_column_container>.vc_column-inner,
+.vc_row-has-fill>.vc_column_container>.vc_column-inner { padding-top: 0 !important;  }
+
+.px-0.vc_column_container > .vc_column-inner { padding-left: 0; padding-right: 0; }
+
+/******************************/
+/********** HTML TAGS *********/
+/******************************/
+html{ font-size: 0.625em; }
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: $color_secondary;
+    overflow-x: hidden;
+    @extend .fuente_regular;
+}
+
+// TEXTOS
+h1,h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    @extend .fuente_regular;
+    margin: 0;
+}
+
+// LINKS
+a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: all .3s;
+    &:hover, &:focus, &:active { text-decoration: none;}
+}
+
+// SEPARADORES
+hr {
+    border-top: 1px solid #ddd;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    width: 100%;
+    &.white_hr {
+        border-top: 1px solid $color_primary;
+    }
+}
+
+// LISTADOS
+ul { margin: 0; padding: 0; }
+li { margin: 0; padding: 0; list-style: none; }

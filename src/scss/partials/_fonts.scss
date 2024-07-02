@@ -1,0 +1,43 @@
+// Font Face
+
+@font-face {
+    font-family: 'Bon Vivant Serif';
+    src: url('../font/BonVivantSerif.woff2') format('woff2'),
+        url('../font/BonVivantSerif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('../font/TTNormsPro-ExtraLight.woff2') format('woff2'),
+        url('../font/TTNormsPro-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('../font/TTNormsPro-Light.woff2') format('woff2'),
+        url('../font/TTNormsPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('../font/TTNormsPro-Regular.woff2') format('woff2'),
+        url('../font/TTNormsPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+// Font config
+$font_heading : 'Bon Vivant Serif', sans-serif  ;
+$font_family :'TT Norms Pro', sans-serif  ;
