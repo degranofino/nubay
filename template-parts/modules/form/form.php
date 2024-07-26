@@ -11,7 +11,7 @@
 					<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-title.php'); ?>
 					<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-subtitle.php'); ?>
 					<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-content.php'); ?>
-					<div class="mt-3 d-block">
+					<div class="mt-3 d-block font-small">
 						<?php if(!empty($phone)): ?>
 							<div class="d-block mt-2">
 								<img src="<?php bloginfo( 'template_url' ) ?>/img/phone-icon.png" alt="">

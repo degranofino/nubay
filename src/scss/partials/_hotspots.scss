@@ -1,6 +1,4 @@
-.module__hotspots  {
-
-    
+.module__hotspots  {    
 
     .draggable__wrapper {
         position: relative;
@@ -60,6 +58,11 @@
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 5px;
+    }
+
+    &.reverse {
+        transform: translate(-50%, 0);
+        flex-direction: column-reverse;
     }
 }
 

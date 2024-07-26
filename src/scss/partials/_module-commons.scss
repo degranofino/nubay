@@ -5,7 +5,6 @@
     font-size: 1.2rem;
     line-height: 1em;
     text-transform: uppercase;
-    letter-spacing: 2px;
     padding-left: 9rem;
     position: relative;
     margin-bottom: 3rem;
@@ -48,22 +47,22 @@
 .module__title {
     
     font-family: $font-family;
-    line-height: .9;
+    // line-height: .9;
     font-size: 3.6rem;
     font-weight: 200;
     margin-bottom: 2rem;
     @media ( min-width: 768px ) {
-        font-size: 4.2rem;
+        font-size: 4rem;
     }
     @media ( min-width: 992px ) {
         font-size: 5rem;
         margin-bottom: 4rem;
     }
     @media ( min-width: 1200px ) {
-        font-size: 6rem;
+        font-size: 5.5rem;
     }
     span span {
-        line-height: .9em !important;
+        line-height: 1.2em !important;
     }
 }
 
@@ -93,7 +92,7 @@
     margin-bottom: 3rem;
 
     @media ( min-width: 992px ) {
-        margin-top: 7rem;
+        // margin-top: 7rem;
         margin-bottom: 4.5rem;
     }
 

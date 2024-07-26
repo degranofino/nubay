@@ -4,13 +4,19 @@
 <div class="section_wrap">
 
 	<div class="container-fluid">
+
+        <div class="row">
+			<div class="col">
+				<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-section.php'); ?>
+			</div>
+		</div>
+
 		<div class="row">
 
-			<div class="col-lg-6">
+			<div class="col-lg-5 mb-5 mb-lg-0">
 
 				<!-- ANIMATION HEAD > number, section y title -->
 				<div class="animated_head">
-					<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-section.php'); ?>
 					<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-title.php'); ?>
                     <?php if(!empty($gallery)): ?>
                         <a class="btn__gallery btn btn-primary" data-gallery="gallery_<?php echo $rand; ?>"><?php _e('VER GALERÍA','nubay') ?></a>
@@ -19,7 +25,7 @@
 
 			</div>
 
-			<div class="col-lg-5 offset-lg-1 normal__animation">
+			<div class="col-lg-6 offset-lg-1 normal__animation mt-lg-4">
 				<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-precontent.php'); ?>
 				<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-content.php'); ?>
 			</div>

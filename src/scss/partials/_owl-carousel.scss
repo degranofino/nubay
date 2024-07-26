@@ -38,9 +38,9 @@
     text-align: center;
 
     .owl-dot {
-        width: 12px;
-        height: 12px;
-        border: 2px solid $color_white !important;
+        width: 9px;
+        height: 9px;
+        border: 1px solid $color_white !important;
         border-radius: 30px;
         margin: 0 5px;
         @media ( min-width: 768px ) {

@@ -18,6 +18,7 @@
     @media ( min-width: 992px  ) { padding: 15rem 6rem; }
     @media ( min-width: 1200px  ) { padding: 18rem 10rem; }
     @media ( min-width: 1600px  ) { padding: 20rem; }
+    
 }
 
 // FOOTER
@@ -106,7 +107,7 @@ header {
     @media ( min-width: 1200px  ) { padding: 7rem; }
 
     &:before {
-        // opacity: 0;
+        opacity: 0;
         content: '';
         display: block;
         width: 100%;
@@ -166,14 +167,27 @@ header {
 }
 
 // SHRINK FUNCTIONS
+// .shrink header {
+//     padding: 1.5rem 2.5rem;
+//     @media ( min-width: 768px  ) { padding: 2.5rem 4rem; }
+//     @media ( min-width: 1200px  ) { padding: 4rem 7rem; }
+//     &::before {
+//         // opacity: 1;
+//     }
+//     .navbar-brand path {
+//         fill: $color_primary;
+//     }
+// }
+
 .shrink header {
-    padding: 1.5rem 2.5rem;
-    @media ( min-width: 768px  ) { padding: 2.5rem 4rem; }
-    @media ( min-width: 1200px  ) { padding: 4rem 7rem; }
+    background-color: $color_secondary;
+    padding: 1.2rem 2.5rem;
+    @media ( min-width: 768px  ) { padding: 2rem 4rem; }
+    @media ( min-width: 1200px  ) { padding: 2rem 7rem; }
+    .navbar-brand path {
+                fill: $color_primary;
+            }
     &::before {
         // opacity: 1;
-    }
-    .navbar-brand path {
-        fill: $color_primary;
     }
 }

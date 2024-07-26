@@ -6,7 +6,7 @@
 
 <!-- BANNER SCROLL -->
 <div class="carrusel_scroll">
-	<div class="c-text">scroll</div>
+	<div class="c-text"><?php _e('scroll down','nubay') ?></div>
 	<div class="c-scrolldown">
 		<div class="c-line"></div>
 	</div>

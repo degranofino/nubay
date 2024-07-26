@@ -32,22 +32,33 @@
   font-family: "Bon Vivant Serif", sans-serif;
   font-size: 1.2rem;
   font-weight: normal;
-  line-height: 1.4em !important;
+  line-height: 1.6em !important;
   color: #666767;
 }
 @media (min-width: 768px) {
   .fuente_regular, p, body {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 992px) {
   .fuente_regular, p, body {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 1600px) {
   .fuente_regular, p, body {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .font-small {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 992px) {
+  .font-small {
+    font-size: 1.6rem;
   }
 }
 
@@ -700,6 +711,7 @@ header {
   }
 }
 header:before {
+  opacity: 0;
   content: "";
   display: block;
   width: 100%;
@@ -763,22 +775,22 @@ header .navbar-brand svg path {
 }
 
 .shrink header {
-  padding: 1.5rem 2.5rem;
+  background-color: #F0EDEA;
+  padding: 1.2rem 2.5rem;
 }
 @media (min-width: 768px) {
   .shrink header {
-    padding: 2.5rem 4rem;
+    padding: 2rem 4rem;
   }
 }
 @media (min-width: 1200px) {
   .shrink header {
-    padding: 4rem 7rem;
+    padding: 2rem 7rem;
   }
 }
 .shrink header .navbar-brand path {
   fill: #176068;
 }
-
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -1018,6 +1030,7 @@ input[type=email],
 input[type=tel],
 select,
 textarea {
+  text-transform: none !important;
   border-radius: 0 !important;
   max-width: 100%;
   width: 100%;
@@ -1229,6 +1242,7 @@ div.wpcf7-mail-sent-ok {
 }
 
 .input__label {
+  text-transform: none !important;
   position: absolute;
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -1264,7 +1278,7 @@ div.wpcf7-mail-sent-ok {
 }
 
 .input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
-.input--filled + .input__label--madoka .input__label-content--madoka {
+.input--filled .input__label--madoka .input__label-content--madoka {
   transform: translateY(-25px);
 }
 
@@ -1345,11 +1359,11 @@ textarea span, .input__label span {
   fill: #fff !important;
 }
 .btn-primary:hover {
-  background: #508E95 !important;
-  color: #F0EDEA !important;
+  background: #fff !important;
+  color: #176068 !important;
 }
 .btn-primary:hover path {
-  fill: #F0EDEA !important;
+  fill: #176068 !important;
 }
 
 .btn-secondary {
@@ -1506,9 +1520,9 @@ textarea span, .input__label span {
   text-align: center;
 }
 .owl-dots .owl-dot {
-  width: 12px;
-  height: 12px;
-  border: 2px solid #fff !important;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #fff !important;
   border-radius: 30px;
   margin: 0 5px;
 }
@@ -1595,12 +1609,13 @@ textarea span, .input__label span {
 @media (min-width: 992px) {
   .module__banner .banner__container {
     left: 6rem;
+    bottom: 60px;
   }
 }
 @media (min-width: 1200px) {
   .module__banner .banner__container {
     left: 10rem;
-    bottom: 150px;
+    bottom: 80px;
   }
 }
 @media (min-width: 1400px) {
@@ -1608,38 +1623,39 @@ textarea span, .input__label span {
     left: 18rem;
   }
 }
-@media (min-width: 1800px) {
+@media (min-width: 1600px) {
   .module__banner .banner__container {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1400px;
+    left: 20rem;
   }
 }
 .module__banner .banner__title {
   font-family: "Bon Vivant Serif", sans-serif;
   color: #F0EDEA;
   font-size: 6rem;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .module__banner .banner__title {
     font-size: 8rem;
-    width: 50%;
+    width: 80%;
   }
 }
 @media (min-width: 1200px) {
   .module__banner .banner__title {
     font-size: 10rem;
+    width: 70%;
   }
 }
 @media (min-width: 1600px) {
   .module__banner .banner__title {
-    font-size: 12rem;
+    font-size: 10rem;
   }
 }
 .module__banner .banner__content p {
+  font-family: "TT Norms Pro", sans-serif;
   color: #F0EDEA;
   font-size: 1.6rem;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .module__banner .banner__content p {
@@ -1648,36 +1664,43 @@ textarea span, .input__label span {
 }
 @media (min-width: 1600px) {
   .module__banner .banner__content p {
-    font-size: 3rem;
+    font-size: 3.3rem;
   }
 }
 
 .carrusel_scroll {
   position: absolute;
   bottom: 0;
-  left: 4rem;
-  z-index: 500;
+  left: 4.5rem;
+  z-index: 3000;
   display: flex;
   align-items: center;
-  transform: rotate(90deg);
-  transform-origin: bottom right;
-  margin-left: -13rem;
-  font-size: 2rem;
-  letter-spacing: 2px;
+  flex-direction: row-reverse;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  font-size: 12px;
 }
 @media (min-width: 768px) {
   .carrusel_scroll {
-    margin-left: -13rem;
+    font-size: 14px;
+    left: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  .carrusel_scroll {
+    left: 4rem;
   }
 }
 @media (min-width: 1200px) {
   .carrusel_scroll {
-    margin-left: -10rem;
+    font-size: 16px;
+    left: 9.5rem;
   }
 }
 .carrusel_scroll .c-text {
-  margin-right: 10px;
+  margin-left: 10px;
   color: #F0EDEA;
+  font-family: "TT Norms Pro", sans-serif;
 }
 .carrusel_scroll .c-scrolldown {
   height: 1px;
@@ -2079,12 +2102,12 @@ textarea span, .input__label span {
 @media (min-width: 768px) {
   .icons__list li .icon__title {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }
 @media (min-width: 1200px) {
   .icons__list li .icon__title {
-    font-size: 33px;
+    font-size: 28px;
   }
 }
 .icons__list li p {
@@ -2105,12 +2128,12 @@ textarea span, .input__label span {
 }
 .icons__list li img {
   margin-bottom: 20px;
-  height: 70px;
+  height: 60px;
   width: auto;
 }
 @media (min-width: 768px) {
   .icons__list li img {
-    height: 90px;
+    height: 75px;
   }
 }
 .icons__list li.animation {
@@ -2228,7 +2251,6 @@ textarea span, .input__label span {
   font-size: 1.2rem;
   line-height: 1em;
   text-transform: uppercase;
-  letter-spacing: 2px;
   padding-left: 9rem;
   position: relative;
   margin-bottom: 3rem;
@@ -2261,6 +2283,7 @@ textarea span, .input__label span {
   font-size: 1.4rem;
   font-weight: 200;
   margin-bottom: 15px;
+  letter-spacing: -1px;
 }
 @media (min-width: 768px) {
   .module__types .item__title {
@@ -2336,6 +2359,10 @@ textarea span, .input__label span {
   text-transform: uppercase;
   margin-bottom: 5px;
 }
+.hotspots__item.reverse {
+  transform: translate(-50%, 0);
+  flex-direction: column-reverse;
+}
 
 .hotspots__fake {
   position: absolute;
@@ -2368,12 +2395,22 @@ textarea span, .input__label span {
   opacity: 1;
 }
 
+@media (min-width: 768px) {
+  .module__form .module__content p {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 992px) {
+  .module__form .module__content p {
+    font-size: 1.6rem;
+  }
+}
+
 .module__section {
   font-family: "TT Norms Pro", sans-serif;
   font-size: 1.2rem;
   line-height: 1em;
   text-transform: uppercase;
-  letter-spacing: 2px;
   padding-left: 9rem;
   position: relative;
   margin-bottom: 3rem;
@@ -2410,14 +2447,13 @@ textarea span, .input__label span {
 
 .module__title {
   font-family: "TT Norms Pro", sans-serif;
-  line-height: 0.9;
   font-size: 3.6rem;
   font-weight: 200;
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .module__title {
-    font-size: 4.2rem;
+    font-size: 4rem;
   }
 }
 @media (min-width: 992px) {
@@ -2428,11 +2464,11 @@ textarea span, .input__label span {
 }
 @media (min-width: 1200px) {
   .module__title {
-    font-size: 6rem;
+    font-size: 5.5rem;
   }
 }
 .module__title span span {
-  line-height: 0.9em !important;
+  line-height: 1.2em !important;
 }
 
 .module__subtitle {
@@ -2464,7 +2500,6 @@ textarea span, .input__label span {
 }
 @media (min-width: 992px) {
   .module__precontent {
-    margin-top: 7rem;
     margin-bottom: 4.5rem;
   }
 }
@@ -2583,7 +2618,7 @@ textarea span, .input__label span {
   display: none;
   position: fixed;
   bottom: 30px;
-  right: 20px;
+  right: 2.5rem;
   width: 32px;
   height: 32px;
   background-size: cover !important;
@@ -2595,6 +2630,12 @@ textarea span, .input__label span {
   .back-to-top {
     width: 44px;
     height: 44px;
+    right: 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .back-to-top {
+    right: 7rem;
   }
 }
 .back-to-top:hover {
@@ -2663,7 +2704,7 @@ textarea span, .input__label span {
   transform: translateY(100%);
   opacity: 0;
   margin-right: 5px;
-  line-height: 1.1em;
+  line-height: 1em;
 }
 .animated_letters > span.loaded span {
   opacity: 1;

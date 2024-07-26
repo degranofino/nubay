@@ -1,0 +1,6 @@
+.module__form {
+    .module__content p {
+        @media ( min-width: 768px  ) { font-size: 1.4rem; }
+        @media ( min-width: 992px  ) { font-size: 1.6rem; }
+    }
+}

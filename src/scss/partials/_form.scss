@@ -84,6 +84,7 @@ input[type="tel"],
 select,
 textarea {
     @extend .buttons;
+    text-transform: none !important;
     border-radius: 0 !important;
     max-width: 100%;
     width: 100%;
@@ -256,6 +257,7 @@ div.wpcf7-mail-sent-ok {
 // label
 .input__label {
     @extend  .buttons;
+    text-transform: none !important;
     position: absolute;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -297,7 +299,7 @@ div.wpcf7-mail-sent-ok {
 }
 
 .input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
-.input--filled + .input__label--madoka .input__label-content--madoka {
+.input--filled .input__label--madoka .input__label-content--madoka {
     transform: translateY(-25px);
 }
 

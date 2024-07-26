@@ -27,9 +27,9 @@
     color: $color_white !important;
     path { fill: $color_white !important; }
     &:hover {
-        background: #508E95 !important;
-        color: $color_secondary !important;
-        path { fill: $color_secondary !important; }
+        background: $color_white !important;
+        color: $color_primary !important;
+        path { fill: $color_primary !important; }
     }
 
 }

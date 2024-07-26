@@ -65,7 +65,6 @@
         font-size: 1.2rem;
         line-height: 1em;
         text-transform: uppercase;
-        letter-spacing: 2px;
         padding-left: 9rem;
         position: relative;
         margin-bottom: 3rem;
@@ -101,6 +100,7 @@
         font-size: 1.4rem;
         font-weight: 200;
         margin-bottom: 15px;
+        letter-spacing: -1px;
         @media ( min-width: 768px ) {
             font-size: 3.6rem;
         }

@@ -22,6 +22,7 @@
 @import 'partials/icons';
 @import 'partials/types';
 @import 'partials/hotspots';
+@import 'partials/contact';
 
 // content
 @import 'partials/module-commons';
@@ -124,13 +125,21 @@
     display: none;
     position: fixed;
     bottom: 30px;
-    right: 20px;
-    width: 32px; height: 32px;
+    right: 2.5rem;
+    width: 32px;
+    height: 32px;
     background-size: cover !important;
     z-index: 5000;
     display: none !important;
     background: url(../img/boton_top.png);
-    @media ( min-width: 768px  ) { width: 44px; height: 44px; }
+    @media ( min-width: 768px  ) { 
+        width: 44px;
+        height: 44px;
+        right: 4rem;
+    }
+    @media ( min-width: 1200px  ) {
+        right: 7rem;
+    }
     &:hover {
         opacity: .8;
     }
@@ -195,7 +204,7 @@
             opacity: 0;
             margin-right: 5px;
             // overflow: hidden;
-            line-height: 1.1em;
+            line-height: 1em;
         }
 
         &.loaded span {

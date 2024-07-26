@@ -2,11 +2,16 @@
     font-family: $font-heading;
     font-size: 1.2rem;
     font-weight: normal;
-    line-height: 1.4em !important;
+    line-height: 1.6em !important;
     color: #666767;
-    @media ( min-width: 768px  ) { font-size: 2rem; }
-    @media ( min-width: 992px  ) { font-size: 2rem; }
-    @media ( min-width: 1600px  ) { font-size: 2rem; }
+    @media ( min-width: 768px  ) { font-size: 1.6rem; }
+    @media ( min-width: 992px  ) { font-size: 1.8rem; }
+    @media ( min-width: 1600px  ) { font-size: 1.8rem; }
+}
+
+.font-small {
+    @media ( min-width: 768px  ) { font-size: 1.4rem; }
+    @media ( min-width: 992px  ) { font-size: 1.6rem; }
 }
 
 /****** COLORES TEXTOS ******/

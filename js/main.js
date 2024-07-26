@@ -90,10 +90,16 @@ function hotspots () {
     // Calcula la diferencia entre los valores de "top"
     const diferenciaTop = topElemento - topLabelPixeles;
 
-    // console.log('Diferencia de top en píxeles:', diferenciaTop);
+    console.log('Diferencia de top en píxeles:', diferenciaTop);
 
-    // Ajusta la altura de la barra
-    jQuery(this).find('.hotspots__bar').css('height', (diferenciaTop - 18) + 'px');
+    if(diferenciaTop > 0) {
+      // Ajusta la altura de la barra
+      jQuery(this).find('.hotspots__bar').css('height', (diferenciaTop - 18) + 'px');
+    } else {
+      jQuery(this).addClass('reverse');
+      jQuery(this).find('.hotspots__bar').css('height',  ((diferenciaTop + 18) * -1) + 'px');
+    }    
+
 
   });
 
@@ -218,6 +224,21 @@ function scroll_magic() {
 
   // init controller
   var controller = new ScrollMagic.Controller();
+
+  if (jQuery('.module').length) {
+    jQuery('.module').each(function () {
+      // build scene
+      new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: 1, // show, when scrolled 10% into view
+        // duration: "100%", // hide 10% before exiting view (80% + 10% from bottom)
+        offset: 25, // move trigger to center of element
+        // reverse: false
+      })
+        .setClassToggle(this, "animation") // add class to reveal
+        .addTo(controller);
+    })
+  }
 
   if (jQuery('.normal__animation').length) {
     jQuery('.normal__animation').each(function () {
