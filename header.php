@@ -30,16 +30,20 @@
 			<img src="<?php bloginfo( 'template_url' ); ?>/img/brand-mobile.svg" alt="" class="d-md-none">
 		</a>
 
-		<?php if(is_front_page()): ?>
-			<a href="#contacto" class="btn btn-primary btn_ancla_contact"><?php _e('CONTÁCTANOS','nubay'); ?></a>
-		<?php else: ?>
-			<a href="<?php bloginfo('url'); ?>/#contacto" class="btn btn-primary"><?php _e('CONTÁCTANOS','nubay'); ?></a>
-		<?php endif; ?>
+		<div>
 
-		<?php /*
-		<ul class="lang_selector">
-			<?php echo my_language_switcher(); ?>
-		</ul>	*/ ?>
+			<ul class="lang_selector">
+				<?php echo my_language_switcher(); ?>
+			</ul>
+			<?php do_action('wpml_add_language_selector'); ?>
+			<?php if(is_front_page()): ?>
+				<a href="#contacto" class="btn btn-primary btn_ancla_contact"><?php _e('CONTÁCTANOS','nubay'); ?></a>
+			<?php else: ?>
+				<a href="<?php bloginfo('url'); ?>/#contacto" class="btn btn-primary"><?php _e('CONTÁCTANOS','nubay'); ?></a>
+			<?php endif; ?>
+		</div>
+
+		
 
 	</header>
 
